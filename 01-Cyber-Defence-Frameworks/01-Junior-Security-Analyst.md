@@ -1,40 +1,77 @@
 # 🧑‍💻 Room: Junior Security Analyst Intro
 
 ## 🎯 Objective
-Understand the role and responsibilities of a Junior Security Analyst in a real-world Security Operations Center (SOC).
+Understand the role, responsibilities, and environment of a Junior Security Analyst in a Security Operations Center (SOC), and simulate real-world scenarios including alert triage, investigation, and escalation.
 
 ---
 
-## 📘 Key Concepts
+## ✅ Task 1: Introduction to the Role
 
-- Tier 1 SOC analysts are the front line — they monitor alerts, investigate incidents, and escalate when necessary.
-- Common tools include: SIEM (e.g., Splunk), ticketing systems, log analyzers, and threat intelligence platforms.
-- Analysts often work in shifts to provide 24/7 coverage.
-
----
-
-## 🧠 What I Learned
-
-- Junior analysts don't solve everything — their job is to triage alerts and escalate confirmed threats.
-- Not every alert means something bad. Analysts need to think critically and recognize false positives.
-- Clear communication and documentation is essential for teamwork across tiers.
+### 🔹 Role Title
+**Triage Specialist** – A Junior Security Analyst primarily reviews alerts and determines whether they are false positives or actual threats requiring escalation.
 
 ---
 
-## 🧪 Hands-On Practice
+## ✅ Task 2: What is a SOC?
 
-- Identified fake alerts and confirmed valid ones.
-- Logged findings and recommended escalation for suspicious events.
-- Explored a ticketing system interface similar to real SOCs.
+A Security Operations Center (SOC) is responsible for:
+- Monitoring and protecting organizational assets (e.g., data, systems, IP)
+- Preventing, detecting, and responding to cyber threats 24/7
+- Using tools like SIEM, IDS, IPS, EDR, and threat intelligence feeds
+- Following structured workflows across Preparation, Detection, and Response
+
+### 🔍 SOC Responsibilities Breakdown:
+- **Preparation & Prevention**: Updating firewalls, signatures, patching, gathering intel
+- **Monitoring & Investigation**: Using SIEM/EDR, prioritizing alerts (Critical → Low)
+- **Response**: Isolate infected hosts, kill malicious processes, delete artifacts
+
+No flag was required for this task.
+
+---
+
+## ✅ Task 3: Simulated SOC Workflow
+
+### 🔍 Scenario:
+An SSH brute-force attack occurred and succeeded.
+
+| Timestamp              | Event Description                                                   |
+|------------------------|----------------------------------------------------------------------|
+| 2024-04-16 05:25:28    | 🚨 Unauthorized SSH attempt from `221.181.185.159`                  |
+| 2024-04-16 05:27:00    | ✅ Successful SSH login from the same IP                             |
+
+---
+
+### 🧠 Investigation Results
+
+- **IP**: `221.181.185.159`
+- **Country**: China
+- **ISP**: China Mobile Communications Corporation
+- **Threat Confidence**: 100% malicious (source: ip-scanner.thm)
+
+---
+
+### 🧾 Actions Taken
+
+- Escalated to: **Will Griffin (SOC Team Lead)**
+- IP Blocked via Firewall Tool
+- Malicious actor left the message: THM{UNTIL-WE-MEET-AGAIN}
+
+  
+---
+
+## ✅ Flags Collected
+
+| Flag Description              | Value                          |
+|-------------------------------|--------------------------------|
+| Role Confirmation             | `Triage Specialist`            |
+| Malicious IP Address          | `221.181.185.159`              |
+| Escalation Contact            | `Will Griffin`                 |
+| Firewall Block Response       | `THM{UNTIL-WE-MEET-AGAIN}`     |
 
 ---
 
 ## 📝 Notes
 
-- A strong SOC uses playbooks to respond to common incidents.
-- Building muscle memory with logs and tools is key to becoming fast and effective.
+- This hands-on exercise reinforced key Tier 1 SOC analyst tasks: triage, investigation, IP reputation lookup, and proper escalation.
+- Practicing with real-world logs and dashboards gives valuable context for threat detection and response workflows.
 
----
-
-## ✅ Flag (if applicable)
-`THM{juni0r-s0c-intro}`
