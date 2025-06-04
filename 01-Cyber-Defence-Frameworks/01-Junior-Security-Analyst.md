@@ -1,4 +1,4 @@
-# 🧑‍💻 Room: Junior Security Analyst Intro
+# Room: Junior Security Analyst Intro
 
 ## 🎯 Objective
 Understand the role, responsibilities, and environment of a Junior Security Analyst in a Security Operations Center (SOC), and simulate real-world scenarios including alert triage, investigation, and escalation.
